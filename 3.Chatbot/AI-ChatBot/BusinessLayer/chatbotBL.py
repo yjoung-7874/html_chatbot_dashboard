@@ -53,7 +53,7 @@ def chat_bow(text):
     s=stopword_(text)
     lemma=text_normalization(s) # calling the function to perform text normalization
     #print(lemma)
-    df=pd.read_excel('./Data/english/dialog_talk_agent.xlsx')
+    df=pd.read_excel('./Data/english/dialog_talk_agent.xlsx', engine='openpyxl')
     #print(df.head(20))
     df.shape[0] # returns the number of rows in dataset
     df.ffill(axis = 0,inplace=True) # fills the null value with the previous value.
